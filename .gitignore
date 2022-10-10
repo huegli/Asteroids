@@ -2,4 +2,4 @@ Pipfile.lock
 .vscode/launch.json
 .vscode/settings.json
 **/*.pyc
-__pycache__/
+**/__pycache__/
