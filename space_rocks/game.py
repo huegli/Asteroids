@@ -12,7 +12,7 @@ class SpaceRocks:
         self.screen = pygame.display.set_mode((800, 600))
         self.background = load_sprite("space", False)
         self.clock = pygame.time.Clock()
-        
+
         self.asteroids = []
         self.bullets = []
         self.spaceship = SpaceShip((400, 300), self.bullets.append)
@@ -25,7 +25,7 @@ class SpaceRocks:
                     > self.MIN_ASTEROID_DISTANCE
                 ):
                     break
-                
+
             self.asteroids.append(Asteroid(position))
 
     def main_loop(self):
@@ -92,7 +92,7 @@ class SpaceRocks:
 
     def _draw(self):
         self.screen.blit(self.background, (0, 0))
-        
+
         for game_object in self._get_game_objects():
             game_object.draw(self.screen)
 
